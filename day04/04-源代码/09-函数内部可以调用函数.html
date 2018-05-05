@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  /*
+  * 讲解思路：
+  * 1、先提出需求，求N阶乘的和  什么都不解释  直接说明这个直接实现很麻烦 所以我们要先铺垫一个知识点（函数内部可以调用函数）
+  *
+  * */
+
+  // 函数内部可以调用函数
+  function fn1() {
+    console.log('fn1开始');
+    fn2();
+    console.log('fn1结束');
+  }
+
+  function fn2() {
+    console.log('fn2开始');
+    console.log('fn2结束');
+  }
+
+  // console.log('嘿嘿');
+  fn1();
+  // console.log('嘻嘻');
+
+  // fn2();
+
+</script>
+</body>
+</html>

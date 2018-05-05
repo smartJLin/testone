@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  // 画图
+
+  // 作用域 ： 变量起作用的区域
+  // 全局作用域：在script标签内，在函数外的区域，在全局作用域内定义的变量是全局变量，全局变量在任何地方都能访问到
+  // 局部作用域：在函数内部的区域，在函数内部定义的变量叫做局部变量，这个局部变量只有在当前函数内部才能访问。
+
+  // 全局变量在任何位置都可以访问
+  //  var num = 1;  // 全局变量
+  //  console.log(num);
+  //
+  //  function fn() {
+  //    console.log(num);
+  //  }
+  //  fn();
+
+
+  //  function fn2() {
+  //    var a = 222;
+  //    console.log(a);
+  //  }
+  //  fn();
+  //  console.log(a);
+
+
+  // 问：if的{}有没有作用域
+  // 只有函数才形成局部作用域  内部可以访问外部  外部不能访问内部
+
+  if (true) {
+    var bb = 3333;
+  }
+
+  console.log(bb);
+
+
+</script>
+</body>
+</html>

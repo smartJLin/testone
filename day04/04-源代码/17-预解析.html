@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  // 预解析：在JS代码运行之前 JS解析器会将JS代码预先解析  （将变量声明和函数声明提前）
+  // 在代码真正运行之前 偷偷的将变量声明（不包括赋值）和函数声明（不包括函数调用）提前
+
+  //  var a;
+  //  console.log(a);
+
+  //  console.log(a);
+  //  var a;
+
+  //  console.log(a);
+  //  var a = 1;
+
+  // why ?
+
+  // 变量声明
+  // var a;
+  // function a (){ // 代码 }
+
+  console.log(a);  // undefined
+  var a = 1;
+  console.log(a); // 1
+
+  // 问
+  function whoIsCool() {
+    console.log('马哥是这个班级里面最帅的人');
+  }
+  whoIsCool();
+
+  function whoIsCool() {
+    console.log('飞飞是这个班级里面最帅的人');
+  }
+  whoIsCool();
+
+  // 函数的名字其实就整个函数
+  function b (){
+    console.log('哈哈');
+  }
+  var b;
+  console.log(b);
+
+</script>
+</body>
+</html>

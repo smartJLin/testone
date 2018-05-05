@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  // 数组去重
+  /**
+   * 思路：
+   * 1、先通过一个数组的完全复制引出第一个for循环
+   * 2、发现这样会完全复制，于是需要做一个判断 什么数可以复制 什么数不能复制
+   * 3、在新数组里面已经存在的就不能复制 （如何确定当前拷贝的数是否在新数组）
+   * 4、需要拿这个数去和新数组里面的每一个值进行比较，如果有相等则代表存在 如果一个都没有则追加到新数组里面
+   * 5、
+   */
+
+  // 数组去重
+  var arr = [2, 3, 4, 5, 6, 7, 8, 9, 6, 5, 4, 3, 2, 1];
+  var newArr = [];
+  // 思路：创建一个新的数组  将老数组里面的值拷贝到新数组里面
+  // 拷贝的时候只要发现新数组里面有这个值就不拷贝  (利用拷贝的这个数去和新数组的数做对比，如果有相等的则直接跳过)
+  // 利用假设成立法
+
+  var tang = 0;
+  var ci = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    tang++;
+    // 假设成立法
+    var flag = true;
+    for (var j = 0; j < newArr.length; j++) {
+      ci++;
+      if (arr[i] == newArr[j]) {
+        flag = false;
+        break;
+      }
+    }
+    if (flag) {
+      newArr.push(arr[i]);
+    }
+  }
+  console.log(tang);
+  console.log(ci);
+  console.log(newArr);
+
+</script>
+</body>
+</html>

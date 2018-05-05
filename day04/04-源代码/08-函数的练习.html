@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 函数的练习
+		// 1. 求任意数组中的最大值
+		function getMax (arr){
+			var max = 0;
+			for(var i = 0; i < arr.length; i++){
+				if(max < arr[i]) {
+					max = arr[i];
+				}
+			}
+			return max;
+		}
+		// 2. 求任意数组中的最小值
+		function getMin (arr){
+			var min = 0;
+			for(var i = 0; i < arr.length; i++){
+				if(min > arr[i]) {
+					min = arr[i];
+				}
+			}
+			return min;
+		}
+		// 3. 翻转任意数组，返回一个新的数组
+		function reverse (arr){
+			var newArr = [];
+			for(var i = arr.length - 1; i > 0; i++){
+				newArr.push(arr[i]);
+			}
+			return arr;
+		}
+		// 4. 对任意数组从小到大排序
+		function bubbleSort (arr){
+			for(var i = 0; i < arr.length - 1; i++) {
+				for(var j = 0; j < arr.length - 1 - i; j++) {
+					if(arr[j] > arr[j + 1]) {
+						var temp = arr[j];
+						arr[j] = arr[j + 1];
+						arr[j + 1] = temp; 
+					}	
+				}
+			}
+			return arr;
+		}
+
+
+	</script>
+</body>
+</html>

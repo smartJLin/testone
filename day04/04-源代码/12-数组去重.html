@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  // 数组去重思路：
+  // 创建一个新的空数组
+  // 循环遍历老数组 将老数组里面的值挨个复制到新的数组里面
+  // 在复制的时候先判断 如果新的数组里面包含当前需要赋值的元素则停止复制
+
+  // 拆分：1、复制数组  2、制作一个函数  该函数的作用检测一个数是否在数组中
+  var arr = [2, 3, 4, 5, 6, 7, 8, 9, 6, 5, 4, 3, 2, 1];
+  var newArr = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    if (isInArr(newArr, arr[i]) == false) {
+      newArr.push(arr[i]);
+    }
+  }
+
+
+  console.log(newArr);
+
+  // 如果返回true 代表包含  返回false 代表不包含
+  function isInArr(arr, value) {
+    for (var i = 0; i < arr.length; i++) {
+      if (value == arr[i]) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  console.log(isInArr(arr, 3));
+  console.log(isInArr(arr, 6));
+  console.log(isInArr(arr, 111));
+
+</script>
+</body>
+</html>

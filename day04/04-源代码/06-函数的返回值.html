@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  /*
+   * 讲解思路：
+   * 1、用最简单案例直接告诉学生什么是返回值
+   * 2、任何函数其实都有返回值，如果不设置 默认返回undefined 如果设置就是我们设置的值
+   * 3、函数就是一个做一件事情 有的事情不需要结果 只需要过程 而有的事情需要结果
+   * 4、提出需求：计算任意班级的总成绩  计算完毕之后再求出任意班级的平均分
+   * */
+
+  // 函数的返回值就是函数调用完毕之后的结果  说白了就是 fn() 它本身的值
+  function fn() {
+    console.log(11);
+    return 666;
+  }
+  var a = fn();
+  console.log(a);
+
+  function buyWater() {
+    console.log('去超市');
+    console.log('付钱');
+    var water = '水';
+    console.log(water);
+  }
+
+  var b = fn();
+
+
+  //计算任意班级的总成绩
+
+  function getScore(arr) {
+    // var arr = [90, 80, 60, 20, 10];
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    // 将sum的值当做这个函数执行完毕的结果返回出来
+    // 通俗的讲就是这个函数执行完毕之后的结果
+    // 在直观一点就是函数调用之后的值  默认是undefined
+    return sum;
+  }
+
+  // 一班总成绩
+  var firstClass = getScore([100, 90, 80, 70, 60]);
+  // 二班总成绩
+  var secondClass = getScore([70, 90, 88, 72, 61]);
+  // 三班总成绩
+  var thirdClass = getScore([97, 90, 40, 62, 100]);
+
+  // 求平均值的函数
+  function gpa(sumScore) {
+    return sumScore / sumScore.length;
+  }
+  // 一班平均值
+  var firstClassGpa = gpa(firstClass);
+  // 二班平均值
+  var secondClassGpa = gpa(secondClass);
+  // 三班平均值
+  var thirdClassGpa = gpa(thirdClass);
+
+
+
+</script>
+</body>
+</html>

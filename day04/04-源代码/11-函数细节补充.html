@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  // 函数重名后面的会覆盖前面的
+  //  function fn (){
+  //    console.log(1);
+  //  }
+  //  function fn (){
+  //    console.log(2);
+  //  }
+  //  fn();
+
+  // 参数的个数可以不一样 如果实参过多 会忽略  形参过多会自动填充undefined
+  //  function fn1(a, b, c) {
+  //    console.log(a, b, c);
+  //  }
+  //  fn1(1);
+  //
+  //  fn1(1, 2, 3, 4, 5)
+
+  // 返回值： 返回值不仅仅会返回函数的结果  同时会阻断函数的继续往下运行
+  function fn1() {
+    console.log(1);
+    return;
+    console.log(2);
+  }
+  fn1();
+
+
+</script>
+</body>
+</html>
